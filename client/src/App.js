@@ -13,7 +13,10 @@ class App extends Component {
     return (
       <div>
         <img src={reactImage} alt="" />
-        <button onClick={this.handleClick}>click me</button>;
+        <button className="btn btn-info" onClick={this.handleClick}>
+          click me
+        </button>
+        ;
       </div>
     );
   }
