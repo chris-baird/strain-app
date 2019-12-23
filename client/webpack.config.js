@@ -11,7 +11,7 @@ module.exports = {
   },
   entry: './src/index.js',
   output: {
-    filename: '[name].bundle.js',
+    filename: './assets/js/[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   optimization: {
@@ -42,7 +42,10 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
+        loader: 'file-loader',
+        options: {
+          outputPath: 'assets/images'
+        }
       }
     ]
   },

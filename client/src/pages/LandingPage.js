@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 import {
   Container,
@@ -28,10 +29,12 @@ import {
 import reactImage from '../../public/assets/images/react.png';
 
 const LandingPage = props => {
+  let history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
 
   const responseGoogle = response => {
     console.log(response);
+    history.push('/dashboard');
   };
   const toggle = () => setIsOpen(!isOpen);
   return (
@@ -77,7 +80,7 @@ const LandingPage = props => {
         </p>
         <p className="lead">
           <GoogleLogin
-            clientId="381905864233-lc90uubg31351m6rphl7phdlobhkcs13.apps.googleusercontent.com"
+            clientId="700009615343-7l1j7oelrvssgh24b7gu3elkissvf4l5.apps.googleusercontent.com"
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
