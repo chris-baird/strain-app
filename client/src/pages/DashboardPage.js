@@ -28,11 +28,13 @@ const DashboardPage = props => {
           <Row className="mt-3">
             <Col>
               <Button
+                className="mx-auto"
                 style={{
                   backgroundColor: '#724373',
                   borderColor: '#333',
                   color: 'white',
-                  curson: 'default'
+                  curson: 'default',
+                  display: 'block'
                 }}
                 outline
               >
@@ -41,11 +43,13 @@ const DashboardPage = props => {
             </Col>
             <Col>
               <Button
+                className="mx-auto"
                 style={{
                   backgroundColor: '#B24828',
                   borderColor: '#333',
                   color: 'white',
-                  curson: 'default'
+                  curson: 'default',
+                  display: 'block'
                 }}
                 outline
               >
@@ -54,11 +58,13 @@ const DashboardPage = props => {
             </Col>
             <Col>
               <Button
+                className="mx-auto"
                 style={{
                   backgroundColor: '#7CAD3D',
                   borderColor: '#333',
                   color: 'white',
-                  curson: 'default'
+                  curson: 'default',
+                  display: 'block'
                 }}
                 outline
               >
