@@ -22,8 +22,8 @@ const App = props => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <Container>
-      <Navbar color="light" light expand="md">
+    <Container fluid="sm">
+      <Navbar className="mb-3" color="light" light expand="md">
         <NavbarBrand href="/">Canna-record</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

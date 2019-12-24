@@ -1,30 +1,72 @@
 import React, { useState } from 'react';
-import { VictoryPie, VictoryContainer } from 'victory';
-import { Row, Col, Card, Button, CardTitle, CardText } from 'reactstrap';
+import PieChart from 'react-minimal-pie-chart';
+import { Row, Col, Card, Button, CardTitle, CardText, Badge } from 'reactstrap';
 
 const DashboardPage = props => {
+  const data = [
+    { x: 'Sativa', y: 3 },
+    { x: 'Hybrid', y: 2 },
+    { x: 'Indica', y: 1 }
+  ];
   return (
     <div>
       <h1 className="text-center">Welcome Chris</h1>
 
       <Row>
         <Col sm="12" md={{ size: 6, offset: 3 }}>
-          <p className="text-center">
-            <strong>5</strong> Strains Entered
-          </p>
-          <VictoryPie
-            animate={{
-              duration: 2000
-            }}
-            colorScale={['#D54728', '#76BE43', '#6E335E']}
+          <h3 className="text-center">
+            You Have Entered <strong>45</strong> Strains.
+          </h3>
+          <PieChart
+            animate={true}
             data={[
-              { x: 'Sativa', y: 4 },
-              { x: 'Hybrid', y: 2 },
-              { x: 'Indica', y: 10 }
+              { title: 'Indica', value: 10, color: '#724373' },
+              { title: 'Sativa', value: 15, color: '#B24828' },
+              { title: 'Hybrid', value: 20, color: '#7CAD3D' }
             ]}
           />
+          <Row className="mt-3">
+            <Col>
+              <Button
+                style={{
+                  backgroundColor: '#724373',
+                  borderColor: '#333',
+                  color: 'white',
+                  curson: 'default'
+                }}
+                outline
+              >
+                Indica <Badge color="secondary">10</Badge>
+              </Button>
+            </Col>
+            <Col>
+              <Button
+                style={{
+                  backgroundColor: '#B24828',
+                  borderColor: '#333',
+                  color: 'white',
+                  curson: 'default'
+                }}
+                outline
+              >
+                Sativa <Badge color="secondary">15</Badge>
+              </Button>
+            </Col>
+            <Col>
+              <Button
+                style={{
+                  backgroundColor: '#7CAD3D',
+                  borderColor: '#333',
+                  color: 'white',
+                  curson: 'default'
+                }}
+                outline
+              >
+                Hybrid <Badge color="secondary">20</Badge>
+              </Button>
+            </Col>
+          </Row>
         </Col>
-
         <Col sm="12" md="6" lg="4" className="mt-3">
           <Card body outline color="danger">
             <CardTitle className="text-center font-weight-bold">
