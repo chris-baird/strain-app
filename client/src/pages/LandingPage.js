@@ -38,7 +38,7 @@ const LandingPage = props => {
         </p>
         <p className="lead">
           <GoogleLogin
-            clientId="700009615343-7l1j7oelrvssgh24b7gu3elkissvf4l5.apps.googleusercontent.com"
+            clientId="381905864233-2ubninohb4lsridk8fq5vmqlboguog26.apps.googleusercontent.com"
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
