@@ -2,19 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 import {
-  Container,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
   Jumbotron,
   Button,
   Row,
@@ -30,43 +17,14 @@ import reactImage from '../../public/assets/images/react.png';
 
 const LandingPage = props => {
   let history = useHistory();
-  const [isOpen, setIsOpen] = useState(false);
 
   const responseGoogle = response => {
     console.log(response);
     history.push('/dashboard');
   };
-  const toggle = () => setIsOpen(!isOpen);
+
   return (
-    <Container>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Canna-record</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
-      </Navbar>
+    <div>
       <Jumbotron>
         <h1 className="display-3">Cannabis diary app</h1>
         <p className="lead">
@@ -132,7 +90,7 @@ const LandingPage = props => {
           </Card>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 
