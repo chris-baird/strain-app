@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(path.join(__dirname, './client/dist')));
 
 app.get('/', (req, res) => {
   console.log(__dirname);
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+  res.sendFile(path.join(__dirname, './client/dist/index.html'));
 });
 
 app.get('*', (req, res) => {
